@@ -36,3 +36,6 @@ class Gamepad:
                 left_stick_y = 0
 
         return left_stick_x, left_stick_y
+    def is_jumping(self):
+        keys = pygame.key.get_pressed()
+        return keys[pygame.K_SPACE]

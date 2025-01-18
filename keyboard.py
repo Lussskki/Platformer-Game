@@ -1,7 +1,7 @@
 import pygame
 
 class Keyboard:
-    def __init__(self, speed = 0.1):
+    def __init__(self, speed=0.1):
         self.keys = pygame.key.get_pressed()
         self.speed = speed  
     
@@ -33,6 +33,9 @@ class Keyboard:
             key_y = -1
         if keys[pygame.K_s]:
             key_y = 1            
-            
         
         return key_x, key_y
+
+    def is_jumping(self):
+        keys = pygame.key.get_pressed()
+        return keys[pygame.K_SPACE]
